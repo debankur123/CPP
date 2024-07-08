@@ -22,7 +22,7 @@ vector<int> twoSumUsingMap(vector<int> &nums,int target){
     for(int i=0;i<n;i++){
         int remaining = target-nums[i];
         if(mp.find(remaining) != mp.end()){
-            return {mp[remaining],i}; // past index,current index is being returned because its present in map
+            return {mp[remaining],i}; // past index,current index is being returned because it's present in map
         }
         mp.insert({nums[i],i}); // when not present in map
     }
