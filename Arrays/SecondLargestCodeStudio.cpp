@@ -61,7 +61,7 @@ int main(){
   int result = secondLargestElementOptimal(nums,n);
   cout << result << endl;
   int secondSmallestOutput = secondSmallestElement(nums,n);
-  cout << "Second Smallest : " <<secondSmallestOutput;
+  cout<<secondSmallestOutput<<endl;
   cout << endl;
   return 0;
 }
