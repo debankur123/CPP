@@ -6,23 +6,23 @@ class Solution
 public:
   int removeDuplicatesinSortedArray(vector<int> &nums){
     if(nums.size()==0){
-        return 0;
+      return 0;
     }
     int count=1;
     for(int index=1;index<nums.size();index++){
-        if(nums[index] != nums[index-1]){
-            count++;
-        }
+      if(nums[index] != nums[index-1]){
+        count++;
+      }
     }
     return count;
   }
   int removeDuplicatesinSortedArrayOptimal(vector<int> &nums){
     int i=0;
     for(int j=1;j<nums.size();j++){
-        if(nums[j]!=nums[i]){
-            nums[i+1]=nums[j];
-            i++;
-        }
+      if(nums[j]!=nums[i]){
+        nums[i+1]=nums[j];
+        i++;
+      }
     }
     return i+1;
   } 

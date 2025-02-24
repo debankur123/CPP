@@ -3,15 +3,17 @@ using namespace std;
 
 class Solution
 {
-public:
-  vector<int> rotateArrayByOnePlace(vector<int> &nums){
-    int temp=nums[0];
-    for(int i=1;i<nums.size();i++){
-        nums[i-1]=nums[i];
+  public:
+    vector<int> rotateArrayByOnePlace(vector<int> &nums)
+    {
+      int temp = nums[0];
+      for (int i = 1; i < nums.size(); i++)
+      {
+        nums[i - 1] = nums[i];
+      }
+      nums[nums.size() - 1] = temp;
+      return nums;
     }
-    nums[nums.size()-1]=temp;
-    return nums;
-  }
 };
 
 int main()
@@ -34,10 +36,11 @@ int main()
     vector<int> result = ob.rotateArrayByOnePlace(nums);
     for (int i = 0; i < result.size(); i++)
     {
-        cout << result[i];
-        if (i != result.size() - 1) {
-            cout << " ";
-        }
+      cout << result[i];
+      if (i != result.size() - 1)
+      {
+        cout << " ";
+      }
     }
     cout << endl;
   }
